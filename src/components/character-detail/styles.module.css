@@ -1,0 +1,67 @@
+.card {
+  background: rgb(30, 36, 48);
+  width: min(100%, 50.25rem);
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 1rem;
+}
+
+.body {
+  width: 90%;
+  padding: 2em 1em;
+}
+
+.card h1,
+.card span {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+.link {
+  display: block;
+  margin-top: 1em;
+  padding: 0.6em 1em;
+  background: rgb(218, 135, 10);
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.link:hover {
+  background: rgb(169, 104, 8);
+}
+
+.image {
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+@media (width >= 48rem) {
+  .card {
+    flex-direction: row-reverse;
+  }
+
+  .card h1 {
+    margin-bottom: 1em;
+    font-size: 1.4rem;
+  }
+
+  .card span {
+    font-size: 1.4rem;
+  }
+
+  .img {
+    border-radius: 1rem 0 0 1rem;
+  }
+}

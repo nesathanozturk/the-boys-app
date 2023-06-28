@@ -7,3 +7,9 @@ body {
 div[data-nextjs-scroll-focus-boundary] {
   height: 100%;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 3rem;
+}
