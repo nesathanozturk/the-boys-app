@@ -1,15 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import CharacterDetail from "@/components/character-detail";
-import { ICharacter, Params } from "@/types";
-import styles from "./styles.module.css";
+import { getCharacterDetail } from "@/api";
+import { Params } from "@/types";
 import { Metadata } from "next";
-
-const getCharacterDetail = async (id: number): Promise<ICharacter> => {
-  const res = await fetch(`https://www.theboysapi.com/api/character/${id}`);
-  const data = await res.json();
-  return data;
-};
+import styles from "./styles.module.css";
 
 export async function generateMetadata({ params }: Params) {
   const data = await getCharacterDetail(params.id);

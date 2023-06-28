@@ -1,15 +1,7 @@
 import Image from "next/image";
+import { getCharacters } from "@/api";
 import CharacterCard from "@/components/character-card";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import { IData } from "@/types";
 import "../styles/globals.css";
-
-export const getCharacters = async (): Promise<IData> => {
-  const res = await fetch("https://www.theboysapi.com/api/character");
-  const data = await res.json();
-  return data;
-};
 
 async function Home() {
   const data = await getCharacters();
