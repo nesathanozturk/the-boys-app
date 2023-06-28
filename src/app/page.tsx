@@ -16,13 +16,11 @@ async function Home() {
 
   return (
     <main>
-      <Header />
       <div className="container">
         {data?.results?.map((character) => (
           <CharacterCard key={character.id} character={character} />
         ))}
       </div>
-      <Footer />
     </main>
   );
 }
