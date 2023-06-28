@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import CharacterDetail from "@/components/character-detail";
-import { getCharacterDetail } from "@/api";
-import { Params } from "@/types";
+import { getCharacters, getCharacterDetail } from "@/api";
+import { ICharacter, Params } from "@/types";
 import { Metadata } from "next";
 import styles from "./styles.module.css";
 
@@ -28,3 +28,13 @@ async function Character({ params }: Params) {
 }
 
 export default Character;
+
+export async function generateStaticParams() {
+  const data = await getCharacters();
+
+  return data?.results?.map((character: ICharacter) => ({
+    params: {
+      id: character.id.toString(),
+    },
+  }));
+}
