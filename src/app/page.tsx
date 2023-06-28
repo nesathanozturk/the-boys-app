@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getCharacters } from "@/api";
 import CharacterCard from "@/components/character-card";
 import "../styles/globals.css";
