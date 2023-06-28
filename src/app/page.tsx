@@ -13,7 +13,6 @@ export const getCharacters = async (): Promise<IData> => {
 
 async function Home() {
   const data = await getCharacters();
-  console.log(data);
 
   return (
     <main>
