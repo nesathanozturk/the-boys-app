@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./styles.module.css";
-import { Character } from "@/types";
+import { ICharacterProps } from "@/types";
 
-const CharacterCard: React.FC<Character> = ({ character }) => {
+const CharacterCard: React.FC<ICharacterProps> = ({ character }) => {
   return (
     <div key={character?.id} className={styles.card}>
       <div className={styles.box}>

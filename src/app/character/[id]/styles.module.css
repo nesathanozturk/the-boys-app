@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (width >= 48rem) {
+  .main {
+    margin-top: 1em;
+  }
+}

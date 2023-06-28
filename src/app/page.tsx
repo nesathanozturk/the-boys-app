@@ -2,7 +2,7 @@ import Image from "next/image";
 import CharacterCard from "@/components/character-card";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { ICharacter, Character, IData } from "@/types";
+import { IData } from "@/types";
 import "../styles/globals.css";
 
 export const getCharacters = async (): Promise<IData> => {

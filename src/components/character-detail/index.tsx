@@ -1,9 +1,11 @@
 import Image from "next/image";
-import styles from "./styles.module.css";
 import Link from "next/link";
-import { CharacterDetail } from "@/types";
+import { ICharacterDetailProps } from "@/types";
+import styles from "./styles.module.css";
 
-const CharacterDetail: React.FC<CharacterDetail> = ({ characterDetail }) => {
+const CharacterDetail: React.FC<ICharacterDetailProps> = ({
+  characterDetail,
+}) => {
   return (
     <>
       <div className={styles.card}>

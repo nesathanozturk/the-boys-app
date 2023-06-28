@@ -15,14 +15,14 @@ export interface IData {
   character: ICharacter[];
 }
 
-export interface Character {
+export interface ICharacterProps {
   character: ICharacter;
 }
 
-export interface CharacterDetail {
+export interface ICharacterDetailProps {
   characterDetail: ICharacter;
 }
 
-export interface CharactersProps {
-  characters: ICharacter[];
+export interface Params {
+  params: { id: number };
 }
