@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import CharacterDetail from "@/components/character-detail";
 import { getCharacters, getCharacterDetail } from "@/api";
 import { ICharacter, Params } from "@/types";
